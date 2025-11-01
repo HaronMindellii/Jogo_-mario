@@ -1,0 +1,376 @@
+/* style.css - CÓDIGO COMPLETO */
+
+/* VARIÁVEIS DE CORES (STEAM DARK) */
+:root {
+    --bg-color: #121212;         /* Fundo Principal MUITO Escuro (Quase Preto) */
+    --main-bg: #1c2732;          /* Fundo da Seção de Conteúdo (Azul Marinho Escuro) */
+    --text-color: #c7d5e0;       /* Texto Claro (Azulado/Cinza) */
+    --accent-color: #66c0f4;     /* Azul Claro da Steam (Destaque) */
+    --separator-color: #324354;  /* Linhas divisórias */
+    
+    /* Cores dos Bosses */
+    --metal-color: #a0a0a0;      /* Cinza Chumbo */
+    --plastic-color: #ff5733;    /* Laranja/Vermelho (Plástico Tóxico) */
+    --oil-color: #c80000;        /* Vermelho Escuro/Preto (Petróleo) */
+    
+    --button-bg: #007bff;        /* Botão de Ação Azul */
+    --button-hover: #0056b3;
+}
+
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* ======================================================= */
+/* ESTILOS DA PÁGINA INICIAL (INDEX.HTML) */
+/* ======================================================= */
+.main-container {
+    padding: 20px 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-header {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--separator-color);
+}
+
+.game-title {
+    color: #fff;
+    font-size: 48px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    color: var(--accent-color);
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.media-section {
+    margin-bottom: 40px;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.media-display {
+    width: 100%;
+    height: 500px;
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.action-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.release-info {
+    font-size: 16px;
+    color: #999;
+    font-weight: bold;
+}
+
+.follow-button, .wishlist-button {
+    background-color: var(--button-bg);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.follow-button:hover, .wishlist-button:hover {
+    background-color: var(--button-hover);
+}
+
+.description-section {
+    text-align: left;
+    background-color: var(--main-bg);
+    padding: 40px;
+    border-radius: 6px;
+}
+
+.description-section h2 {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.separator {
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 30px auto;
+}
+
+.intro-text {
+    font-size: 17px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.boss-roster {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.boss-card {
+    background-color: #2a3a4c;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.boss-title {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid;
+    width: 100%;
+}
+
+.metal-color { border-color: var(--metal-color); color: var(--metal-color); }
+.plastic-color { border-color: var(--plastic-color); color: var(--plastic-color); }
+.oil-color { border-color: var(--oil-color); color: var(--oil-color); }
+
+.boss-art {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 15px;
+    border: 1px solid var(--separator-color);
+    background-color: #000;
+}
+
+.boss-card p {
+    font-size: 15px;
+    padding: 0 20px;
+}
+
+.call-to-action {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #17a2b8;
+    color: #fff;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #138496;
+}
+
+/* RODAPÉ */
+.footer {
+    background-color: #0d121c;
+    color: #5d6771;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+}
+
+/* ======================================================= */
+/* ESTILOS DA PÁGINA DE GAMEPLAY (GAMEPLAY.HTML) */
+/* ======================================================= */
+
+.video-page-body {
+    background-color: var(--bg-color); /* Fundo #121212 */
+    color: var(--text-color); /* Texto #c7d5e0 */
+    padding: 0;
+    overflow-x: hidden;
+    text-align: center; 
+}
+
+.video-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* CABEÇALHO E BOTÃO VOLTAR - MAIOR E AZUL */
+.video-header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start; 
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: bold;
+    padding: 10px 25px; 
+    border-radius: 4px;
+    background-color: var(--accent-color); /* Fundo Azul Destaque #66c0f4 */
+    transition: background-color 0.2s;
+    text-transform: uppercase;
+}
+
+.back-button:hover {
+    background-color: #5aa6d8; 
+    color: #fff;
+}
+
+.back-button .material-icons {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+/* VÍDEO EM DESTAQUE E TÍTULO */
+.video-player-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: inline-block; 
+    width: 100%;
+}
+
+.video-player {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+    background-color: #000;
+}
+
+.video-player iframe, .video-player video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    color: #fff;
+    font-size: 26px;
+    padding: 15px;
+    text-align: center; 
+    z-index: 10;
+}
+
+/* SEÇÃO DE DESCRIÇÃO (Centralizada) */
+.video-description-section {
+    text-align: center; 
+    background-color: var(--main-bg); /* Fundo #1c2732 (Dark Blue) */
+    padding: 30px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    max-width: 900px; /* Limita a largura para melhor leitura */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.summary-box {
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+.summary-box p {
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    text-align: center; 
+}
+
+/* CHAMADA PARA AÇÃO ABAIXO DO VÍDEO */
+.call-to-action-video {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cta-button-video {
+    display: inline-block;
+    background-color: #17a2b8;
+    color: #fff;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button-video:hover {
+    background-color: #138496;
+}
+
+/* MEDIA QUERIES para Responsividade */
+@media (max-width: 768px) {
+    .video-title-overlay {
+        font-size: 20px;
+        padding: 10px;
+    }
+    .video-container {
+        padding: 10px;
+    }
+    .video-description-section {
+        padding: 20px;
+    }
+}

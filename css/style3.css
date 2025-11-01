@@ -1,0 +1,167 @@
+/* style3.css - CÓDIGO COMPLETO E DEFINITIVO */
+
+/* VARIÁVEIS DE CORES (STEAM DARK) - FUNDAMENTAIS PARA AS CORES ESCURAS */
+:root {
+    --bg-color: #121212;         /* Fundo Principal MUITO Escuro (Quase Preto) */
+    --main-bg: #1c2732;          /* Fundo da Seção de Conteúdo (Azul Marinho Escuro) */
+    --text-color: #c7d5e0;       /* Texto Claro (Azulado/Cinza) */
+    --accent-color: #66c0f4;     /* Azul Claro da Steam (Destaque) */
+    --separator-color: #324354;  /* Linhas divisórias */
+    
+    --button-bg: #007bff;        /* Botão de Ação Azul */
+    --button-hover: #0056b3;
+}
+
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color); /* FUNDO PADRÃO ESCURO */
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* ======================================================= */
+/* ESTILOS DA PÁGINA INICIAL (INDEX.HTML) */
+/* ======================================================= */
+.main-container {
+    padding: 20px 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.description-section {
+    text-align: left;
+    background-color: var(--main-bg); /* FUNDO DO BLOCO PRINCIPAL (#1c2732) */
+    padding: 40px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.description-section h2 {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.separator {
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 30px auto;
+}
+
+.intro-text {
+    font-size: 17px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* ... demais estilos do index.html ... */
+
+
+/* ======================================================= */
+/* ESTILOS DA PÁGINA DE GAMEPLAY (GAMEPLAY.HTML) */
+/* ======================================================= */
+
+/* PONTO CRÍTICO CORRIGIDO: Garante o fundo preto para as páginas secundárias */
+.video-page-body {
+    background-color: var(--bg-color); 
+    color: var(--text-color); 
+    padding: 0;
+    overflow-x: hidden;
+    text-align: center; 
+}
+
+.video-header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start; 
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: bold;
+    padding: 10px 25px; 
+    border-radius: 4px;
+    background-color: var(--accent-color); 
+    transition: background-color 0.2s;
+    text-transform: uppercase;
+}
+
+/* ... demais estilos do gameplay.html ... */
+
+
+/* ======================================================= */
+/* ESTILOS DA PÁGINA "SIGA O PROJETO" (FOLLOW.HTML) */
+/* REUTILIZAÇÃO MÁXIMA PARA CONSISTÊNCIA */
+/* ======================================================= */
+
+/* A classe .description-section no HTML já garante o fundo e o formato do bloco! */
+.follow-links-section {
+    width: 100%;
+    margin-bottom: 40px;
+    /* Centralização de texto já deve ser herdada da classe description-section */
+}
+
+.follow-links-section .section-title {
+    color: var(--accent-color); 
+}
+
+.follow-links-section .intro-text, .follow-links-section .final-text {
+    font-size: 17px;
+    color: var(--text-color);
+    margin: 20px auto 30px auto;
+    max-width: 600px;
+}
+
+/* ESTILOS DOS BOTÕES DE LINK */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.follow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3); 
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
+.follow-button span.material-icons {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+/* CORES DOS BOTÕES */
+.primary-follow-btn {
+    background-color: var(--accent-color); 
+    color: #000;
+    box-shadow: 0 4px 0 #3a97c9;
+}
+/* ... demais cores dos botões de follow ... */
